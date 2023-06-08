@@ -11,42 +11,60 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <table>
+    <tr>
+      <th>名称</th>
+      <td>
+        <%= form.text_field :name %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>描述</th>
+      <td>
+        <%= form.text_area :description %>
+      </td>
+    </tr>
+
+    <!--
+    <tr>
+      <th>标注</th>
+      <td>
+        <%= form.text_field :mark %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>主页</th>
+      <td>
+        <%= form.text_field :home %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>公开</th>
+      <td>
+        <%= form.check_box :is_public, style: "display: block" %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>父级项目</th>
+      <td>
+        <%= form.number_field :parent_project %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>继承父级项目的成员</th>
+      <td>
+        <%= form.check_box :isInherit_Parent_Project_Members %>
+      </td>
+    </tr>
+    -->
+  </table>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :mark, style: "display: block" %>
-    <%= form.text_field :mark %>
-  </div>
-
-  <div>
-    <%= form.label :home, style: "display: block" %>
-    <%= form.text_field :home %>
-  </div>
-
-  <div>
-    <%= form.label :is_public, style: "display: block" %>
-    <%= form.check_box :is_public %>
-  </div>
-
-  <div>
-    <%= form.label :parent_project, style: "display: block" %>
-    <%= form.number_field :parent_project %>
-  </div>
-
-  <div>
-    <%= form.label :isInherit_Parent_Project_Members, style: "display: block" %>
-    <%= form.check_box :isInherit_Parent_Project_Members %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit '确定' %>
   </div>
 <% end %>

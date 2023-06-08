@@ -1,37 +1,41 @@
 <div id="<%= dom_id project %>">
-  <p>
-    <strong>Name:</strong>
-    <%= project.name %>
-  </p>
+  <table>
+    <tr>
+      <th>名称:</th>
+      <td><%= project.name %></td>
+    </tr>
 
-  <p>
-    <strong>Description:</strong>
-    <%= project.description %>
-  </p>
+    <tr>
+      <th>描述:</th>
+      <td><%= project.description %></td>
+    </tr>
+    <!--
 
-  <p>
-    <strong>Mark:</strong>
-    <%= project.mark %>
-  </p>
+    <tr>
+      <th>标注:</th>
+      <td><%= project.mark %></td>
+    </tr>
 
-  <p>
-    <strong>Home:</strong>
-    <%= project.home %>
-  </p>
+    <tr>
+      <th>主页:</th>
+      <td><%= project.home %></td>
+    </tr>
 
-  <p>
-    <strong>Is public:</strong>
-    <%= project.is_public %>
-  </p>
+    <tr>
+      <th>公开:</th>
+      <td><%= project.is_public %></td>
+    </tr>
 
-  <p>
-    <strong>Parent project:</strong>
-    <%= project.parent_project %>
-  </p>
+    <tr>
+      <th>父项目:</th>
+      <td><%= project.parent_project %></td>
+    </tr>
 
-  <p>
-    <strong>Isinherit parent project members:</strong>
-    <%= project.isInherit_Parent_Project_Members %>
-  </p>
+    <tr>
+      <th>继承父项目的成员:</th>
+      <td><%= project.isInherit_Parent_Project_Members %></td>
+    </tr>
+    -->
+  </table>
 
 </div>
