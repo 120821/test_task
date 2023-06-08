@@ -1,32 +1,48 @@
 <div id="<%= dom_id blog %>">
-  <p>
-    <strong>Title:</strong>
-    <%= blog.title %>
-  </p>
+  <table>
+    <tr>
+      <th>标题:</th>
+      <td>
+        <%= blog.title %>
+      </td>
+    </tr>
 
-  <p>
-    <strong>Content:</strong>
-    <%= blog.content %>
-  </p>
+    <tr>
+      <th>内容:</th>
+      <td>
+        <%= blog.content %>
+      </td>
+    </tr>
 
-  <p>
-    <strong>Views:</strong>
-    <%= blog.views %>
-  </p>
+    <tr>
+      <th>浏览:</th>
 
-  <p>
-    <strong>Public:</strong>
-    <%= blog.public %>
-  </p>
+      <td>
+        <%= blog.views %>
+      </td>
+    </tr>
 
-  <p>
-    <strong>Top:</strong>
-    <%= blog.top %>
-  </p>
+    <tr>
+      <th>公开:</th>
+      <td>
+        <%= blog.public %>
+      </td>
+    </tr>
 
-  <p>
-    <strong>Category:</strong>
-    <%= blog.category %>
-  </p>
+    <tr>
+      <th>置顶:</th>
+
+      <td>
+        <%= blog.top %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Category:</th>
+      <td>
+        <%= blog.category %>
+      </td>
+    </tr>
+  </table>
 
 </div>
