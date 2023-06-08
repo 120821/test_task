@@ -1,14 +1,39 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Questions</h1>
+<h1>问题</h1>
 
+<%= link_to "新建", new_question_path %>
 <div id="questions">
-  <% @questions.each do |question| %>
-    <%= render question %>
-    <p>
-      <%= link_to "Show this question", question %>
-    </p>
+  <table>
+      <tr>
+        <th>标题:</th>
+        <!--
+        <th style="width: 300px;">内容:</th>
+        -->
+        <th>状态:</th>
+        <th>优先级:</th>
+        <th>分配给:</th>
+        <th>开始日期:</th>
+        <th>查看:</th>
+      </tr>
+    <% @questions.each do |question| %>
+      <%#= render question %>
+
+      <tr>
+        <td><%= question.title %></td>
+        <!--
+        <td><%= question.content %></td>
+        -->
+        <td><%= question.status %></td>
+        <td><%= question.level %></td>
+        <td><%= question.assigned_to %></td>
+        <td><%= question.start_day.strftime("%Y-%m-%d") %></td>
+        <td>
+          <%= link_to "查看", question %>
+        </td>
+      </tr>
   <% end %>
+  </table>
 </div>
 
-<%= link_to "New question", new_question_path %>
+<%= link_to "新建", new_question_path %>

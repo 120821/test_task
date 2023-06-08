@@ -1,32 +1,34 @@
 <div id="<%= dom_id question %>">
-  <p>
-    <strong>Title:</strong>
-    <%= question.title %>
-  </p>
+  <table>
+    <tr>
+      <th>标题:</th>
+      <td><%= question.title %></td>
+    </tr>
 
-  <p>
-    <strong>Content:</strong>
-    <%= question.content %>
-  </p>
+    <tr>
+      <th>内容:</th>
+      <td><%= question.content %></td>
+    </tr>
 
-  <p>
-    <strong>Status:</strong>
-    <%= question.status %>
-  </p>
+    <tr>
+      <th>状态:</th>
+      <td><%= question.status %></td>
+    </tr>
 
-  <p>
-    <strong>Level:</strong>
-    <%= question.level %>
-  </p>
+    <tr>
+      <th>优先级:</th>
+      <td><%= question.level %></td>
+    </tr>
 
-  <p>
-    <strong>Assigned to:</strong>
-    <%= question.assigned_to %>
-  </p>
+    <tr>
+      <th>分配给:</th>
+      <td><%= question.assigned_to %></td>
+    </tr>
 
-  <p>
-    <strong>Start day:</strong>
-    <%= question.start_day %>
-  </p>
+    <tr>
+      <th>开始日期:</th>
+      <td><%= question.start_day %></td>
+    </tr>
+  </table>
 
 </div>
