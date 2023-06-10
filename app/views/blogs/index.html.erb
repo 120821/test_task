@@ -5,31 +5,18 @@
 
 <div id="blogs">
   <table>
-    <tr>
-      <th>标题:</th>
-      <th>分类:</th>
-       <th>浏览:</th>
-       <th>查看:</th>
-    </tr>
     <% @blogs.each do |blog| %>
       <tr>
         <td>
-          <%= blog.title %>
-        </td>
-        <td>
-          <%= blog.category %>
-        </td>
-        <td>
-          <%= blog.views %>
+          <%= blog.title %>&nbsp; <%= blog.category %>&nbsp; (<%= blog.views %>)
         </td>
         <td>
           <% for blog in @blogs %>
             <div class="blog" data-id="<%= blog.id %>">
-              <%= link_to blog.title, blog_path(blog) %>
+              <%= link_to '查看', blog_path(blog) %>
               <span class="views-count"><%= blog.views %></span>
             </div>
           <% end %>
-          <%#= link_to "查看", blog %>
         </td>
       </tr>
     <%#= render blog %>
