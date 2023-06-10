@@ -23,7 +23,13 @@
           <%= blog.views %>
         </td>
         <td>
-          <%= link_to "查看", blog %>
+          <% for blog in @blogs %>
+            <div class="blog" data-id="<%= blog.id %>">
+              <%= link_to blog.title, blog_path(blog) %>
+              <span class="views-count"><%= blog.views %></span>
+            </div>
+          <% end %>
+          <%#= link_to "查看", blog %>
         </td>
       </tr>
     <%#= render blog %>
@@ -32,3 +38,22 @@
 </div>
 
 <%= link_to "新建", new_blog_path %>
+<script>
+  $(document).ready(function() {
+    $('.blog').click(function() {
+      var blogId = $(this).data('id');
+      $.ajax({
+        url: '/blogs/' + blogId,
+        method: 'GET',
+        success: function() {
+          var viewsCount = $(this).find('.views-count').text();
+          var totalViewsCount = $('#total-views-count').text();
+          $(this).find('.views-count').text(parseInt(viewsCount) + 1);
+          $('#total-views-count').text(parseInt(totalViewsCount) + 1);
+        }
+      });
+    });
+  });
+</script>
+
+Total views: <span id="total-views-count"><%= Blog.sum(:views) %></span>
